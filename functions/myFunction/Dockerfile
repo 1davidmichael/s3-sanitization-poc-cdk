@@ -5,7 +5,7 @@ COPY app.py ${LAMBDA_TASK_ROOT}
 
 # Install the function's dependencies using file requirements.txt
 # from your project folder.
-
+# TODO: Fix this because it possibly includes .venv dir inflating lambda size
 COPY /  .
 RUN pip3 install poetry
 RUN poetry export -f requirements.txt && pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"

@@ -1,14 +1,13 @@
-# Welcome to your CDK TypeScript project
+# S3 Object Sanitization via S3 Object Access Point Lambda
 
-This is a blank project for TypeScript development with CDK.
+This project provides an example of using [scrubadub] and [s3 object lambda] in CDK to sanitize s3 objects requested of PII data. This was done as a POC to see how easy it was to implement.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Deployment
 
-## Useful commands
+```bash
+npm install
+cdk synth && cdk deploy
+```
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+[scrubadub]: https://scrubadub.readthedocs.io/en/stable/index.html
+[s3 object lambda]: https://aws.amazon.com/blogs/aws/introducing-amazon-s3-object-lambda-use-your-code-to-process-data-as-it-is-being-retrieved-from-s3/
